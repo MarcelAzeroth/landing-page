@@ -1,0 +1,337 @@
+/*======Resets======*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Chivo', sans-serif;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+button,
+input{
+    display: block;
+    border: none;
+    width: 100%;
+}
+
+/*======Variables======*/
+
+:root{
+    --turkis: #54E6AF;
+    --dark-grey: #2C344B;
+    --dark-blue: #121725;
+    --white: #ffffff;
+    --light-grey: #5A668A;
+    --light: #C2CBE5;
+}
+
+/*======Action======*/
+
+.background-img{
+    background-image: url("/assets/mobile/image-host.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    
+}
+
+@media (min-width: 768px){
+    .background-img{
+        background-image: url("/assets/tablet/image-host.jpg");
+        background-position: top right;
+        background-size: auto; 
+    }
+
+    body{
+        background-color: var(--dark-blue);
+    }
+}
+
+@media (min-width: 1140px){
+    .background-img{
+        background-image: url("/assets/desktop/image-host.jpg");
+        background-position: center right;
+        
+    }
+}
+
+
+
+.wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.5em;
+    height: 100vh;
+    background-color: rgba(18, 23, 37, .9);
+    color: var(--white);
+}
+
+@media (min-width: 768px){
+    .wrapper{
+        display: block;
+        padding: 1.5em 3em 0em 3em;
+        background-color: transparent;
+    }
+}
+
+@media (min-width: 1140px){
+    .wrapper{
+        padding: 6em 10em;
+    }
+}
+
+/*======Header======*/
+
+.logo-div{
+    padding: 3.5em 0;
+}
+
+@media (min-width: 768px){
+    .logo-div{
+        padding: 1.5em 0;
+        margin-bottom: 13em;
+    }
+}
+
+@media (min-width: 1140px){
+    .logo-div{
+        margin-bottom: 10em;
+    }
+}
+
+/*======Headline======*/
+
+.headline-div{
+    margin-bottom: .9em;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 38px;
+}
+
+.headline-highlight{
+    color: var(--turkis);
+}
+
+/*======Copy======*/
+
+
+
+.hero-copy{
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    opacity: .8;
+}
+
+@media (min-width: 768px){
+   .hero-copy{
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 768px){
+    .content{
+        background-color: var(--dark-blue);
+        padding: 6em 2em 0 0;
+        width: 600px; /* Hacky AF */
+    }
+
+    .hero-copy{
+        text-align: left;
+    }
+
+    h1{
+        text-align: left;
+    }
+}
+
+@media (min-width: 1140px){
+    .content{
+        background-color: var(--dark-blue);
+        padding: 6em 2em 0 0;
+        width:80%;
+    }
+
+    h1{
+        font-size: 3.25em;
+        margin-bottom: .25em;
+    }
+
+    .copy-div{
+        max-width: 600px;
+    }
+
+    .submit-wrapper {
+        max-width: 600px;
+    }
+}
+
+
+
+/*======Credentials======*/
+
+.credentials > ul{
+    margin: 2em 0;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.credentials > ul > li > img{
+    color: #5A668A;
+    height: 15px;
+}
+
+@media (min-width: 768px){
+    .submit-wrapper{
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .credentials > ul{
+        justify-content: flex-start;
+        gap: 2em;
+    }
+
+    .credentials > ul > li > img{
+        height: 20px;
+    }
+}
+
+/*======Form======*/
+
+form{
+    display:flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+form > input,
+form > button{
+    border-radius: 28px;
+    padding: 1em;
+}
+
+form > button{
+    background: var(--turkis);
+    font-weight: bold;
+    color: var(--dark-blue);
+}
+
+form > button:hover{
+    background-color: #B3FFE2;
+    cursor: pointer;
+}
+
+form > input {
+    padding: 1em 2em;
+    background: var(--dark-grey);
+    color: var(--white);
+    font-weight: bold;
+}
+
+form > input:focus{
+    outline: none;
+}
+
+::placeholder {
+    color: var(--light);
+    font-weight: bold;
+  }
+
+  @media (min-width: 768px){
+      .form{
+          position: relative;
+      }
+
+      .form {
+          width: 80%;
+      }
+
+      form > button{
+          position: absolute;
+          width: 35%;
+          right: 5px;
+          padding: .75em;
+          transform: translateY( 8%); /* Why tho */
+        
+      }
+  }
+
+
+
+  /*======Shape======*/
+
+  .hide-mobile{
+    display: none;
+  }
+
+  @media (min-width: 768px){
+      .shape{
+        position: absolute;
+        bottom: 0;
+      }
+
+      .hide-mobile{
+        display: inline;
+      }
+  }
+
+  @media (min-width: 1140px){
+    .shape{
+        right: 0;
+        bottom: 100px; /* MAGIC NUMBAZ 4 EVA*/
+      }
+  }
+
+  /*======Validation Message======*/
+  
+  .validation-msg {
+      font-size: 12px;
+      font-weight: bold;
+      color: #FB3E3E;
+      margin: .5em 0 0 2.5em;
+  }
+
+  .hidden{
+      display: none;
+  }
