@@ -1,70 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/favicon-32x32.png"
-    />
-    <title>Frontend Mentor | Pod request access landing page</title>
+    <link rel="stylesheet" href="/style.css">
+    <title>Pod Schmod</title>
+</head>
+<body>
 
-  </head>
-  <body>
-    <div class="background-img">
-      <div class="wrapper">
-        <header>
-          <div class="logo-div">
-            <img class="logo" src="/assets/desktop/logo.svg" alt="">
-          </div>
-        </header>
-  
-        <div class="content">
-          <div class="headline-div">
-            <h1 class="headline-highlight">Publish your podcasts</h1>
-              <h1>everywhere.</h1>
-          </div>
-          <div class="copy-div">
-            <p class="hero-copy">
-              Upload your audio to Pod with a single
-              click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google
-              Podcasts, Pocket Casts and more!
-            </p>
-          </div>
-          <div class="submit-wrapper">
-            <div class="credentials">
-              <ul>
-                <li><img src="/assets/desktop/spotify.svg" alt=""></li>
-                <li><img src="/assets/desktop/apple-podcast.svg" alt=""></li>
-                <li><img src="/assets/desktop/google-podcasts.svg" alt=""></li>
-                <li><img src="/assets/desktop/pocket-casts.svg" alt=""></li>
-              </ul>
-            </div>
-            <div class="form">
-              <form action="#">
-                <input id="email" type="text" placeholder="Email address">
-                <button>Request Access</button>
-              </form>
-              <div class="validation-msg hidden">
-                <p>Oops! Please check your email</p>
-              </div>
-            </div>
-          </div>
-        </div>
-          <div class="shape hide-mobile">
-            <img src="/assets/shape.png" alt="">
-          </div>
-      </div>
+<div class="container">
+    <div class="logo">
+        <img src="/assets/desktop/logo.svg" alt="">
     </div>
-    <script src="index.js"></script>
-  </body>
+    <div class="content-container">
+        <h1><span class="highlight">Publish your podcasts</span> everywhere.</h1>
+        <p>Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
+        <div class="flex-direction">
+            <div class="form-container">
+                <form action="#">
+                    <input id="email" type="text" placeholder="Email address">
+                    <button>Request Access</button>
+                </form>
+                <p class="validation-msg hidden">Oops! Please check your email</p>
+            </div>
+            <div class="credential-container">
+                <ul>
+                    <li><img src="/assets/desktop/spotify.svg" alt=""></li>
+                    <li><img src="/assets/desktop/apple-podcast.svg" alt=""><li>
+                    <li><img src="/assets/desktop/google-podcasts.svg" alt=""></li>
+                    <li><img src="/assets/desktop/pocket-casts.svg" alt=""></li>
+                </ul>
+            </div>            
+        </div>
+    </div>
+    <div class="background-img">
+        <img class="desktop" src="/assets/desktop/image-host.jpg" alt="">
+        <img class="tablet" src="/assets/tablet/image-host.jpg" alt="">
+    </div>
+    <div class="shape">
+        <img src="/assets/shape.png" alt="">
+    </div>
+</div>
+    <script src="/index.js"></script>
+</body>
 </html>
